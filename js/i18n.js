@@ -89,9 +89,10 @@ export const translations = {
     skills: {
       index: '04 / Toolkit',
       heading: 'Tools I work with.',
-      intro: 'A practical frontend toolkit, with foundational knowledge in related technologies.',
+      intro: 'A project-tested frontend stack, supported by UI libraries, APIs, and platform integrations.',
       frontend: 'Frontend',
-      apis_tools: 'APIs & tools',
+      libraries_tools: 'Libraries & tools',
+      apis_platforms: 'APIs & platforms',
       foundational: 'Foundational knowledge'
     },
     certificates: {
@@ -236,9 +237,10 @@ export const translations = {
     skills: {
       index: '04 / Werkzeugkasten',
       heading: 'Technologien und Werkzeuge.',
-      intro: 'Ein praxisorientierter Frontend-Werkzeugkasten und Grundlagen in angrenzenden Technologien.',
+      intro: 'Ein in Projekten eingesetzter Frontend-Stack mit ergänzenden UI-Bibliotheken, APIs und Plattformintegrationen.',
       frontend: 'Frontend',
-      apis_tools: 'APIs & Werkzeuge',
+      libraries_tools: 'Bibliotheken & Werkzeuge',
+      apis_platforms: 'APIs & Plattformen',
       foundational: 'Grundkenntnisse'
     },
     certificates: {
