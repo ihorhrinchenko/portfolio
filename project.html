@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f5f1" />
+    <meta name="description" content="Personal project details by Ihor Hrinchenko, frontend developer in Hagen, Germany." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Personal project — Ihor Hrinchenko" />
+    <meta property="og:description" content="Personal project details by Ihor Hrinchenko." />
+    <meta property="og:locale" content="en_US" />
+    <title>Personal project — Ihor Hrinchenko</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script>
+      (() => {
+        try {
+          const navigation_entry = window.performance?.getEntriesByType?.('navigation')?.[0];
+          if (navigation_entry?.type === 'reload' && 'scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+          }
+          const saved_theme = localStorage.getItem('portfolio_theme');
+          const preferred_theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.dataset.theme = saved_theme || preferred_theme;
+          const saved_language = localStorage.getItem('portfolio_language');
+          document.documentElement.lang = saved_language === 'de' ? 'de' : 'en';
+        } catch {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip_link" href="#main_content" data-i18n="a11y.skip_link">Skip to content</a>
+    <header class="site_header">
+      <div class="header_inner page_container">
+        <a class="wordmark" href="/" aria-label="Ihor Hrinchenko — home" data-i18n-aria-label="brand.home"><span class="wordmark_mark" aria-hidden="true">ih.</span><span class="wordmark_name">Ihor Hrinchenko</span></a>
+        <nav class="desktop_nav" aria-label="Main navigation" data-i18n-aria-label="a11y.main_nav">
+          <a href="/#about_section" data-i18n="nav.about">About</a><a href="/#projects_section" data-i18n="nav.projects">Projects</a><a href="/#experience_section" data-i18n="nav.experience">Experience</a><a href="/#skills_section" data-i18n="nav.skills">Skills</a><a href="/#contact_section" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="header_controls">
+        <div class="language_switcher" role="group" aria-label="Choose language" data-i18n-aria-label="a11y.choose_language"><button class="language_button" type="button" lang="en" aria-label="English" data-i18n-aria-label="learning.language_english" data-language="en" aria-pressed="true">EN</button><span class="language_divider" aria-hidden="true">/</span><button class="language_button" type="button" lang="de" aria-label="German" data-i18n-aria-label="learning.language_german" data-language="de" aria-pressed="false">DE</button></div>
+          <button class="theme_toggle icon_button" id="theme_toggle" type="button" aria-label="Switch to dark theme"><svg class="theme_icon_sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="theme_icon_moon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20.5 14.2A8.8 8.8 0 0 1 9.8 3.5 8.8 8.8 0 1 0 20.5 14.2Z"/></svg></button>
+          <button class="mobile_menu_toggle icon_button" id="menu_toggle" type="button" aria-controls="mobile_nav" aria-expanded="false" aria-label="Open navigation menu"><svg class="menu_icon_open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu_icon_close" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+        </div>
+      </div>
+      <nav class="mobile_nav page_container" id="mobile_nav" aria-label="Mobile navigation" data-i18n-aria-label="a11y.mobile_nav" hidden>
+        <a href="/#about_section" data-i18n="nav.about">About</a><a href="/#projects_section" data-i18n="nav.projects">Projects</a><a href="/#experience_section" data-i18n="nav.experience">Experience</a><a href="/#skills_section" data-i18n="nav.skills">Skills</a><a href="/#contact_section" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </header>
+    <main id="main_content" class="project_page_main page_container" tabindex="-1">
+      <a class="back_link" href="/#projects_section"><span aria-hidden="true">←</span><span data-i18n="project_detail.back">Back to projects</span></a>
+      <div id="project_detail_root">
+        <noscript><p>Enable JavaScript to view project details.</p></noscript>
+      </div>
+    </main>
+    <footer class="site_footer">
+      <div class="page_container footer_inner"><a class="footer_name" href="/">Ihor Hrinchenko <span>© <span id="footer_year"></span></span></a><p data-i18n="footer.note">Designed and built with care.</p><a class="footer_top_link" href="/#main_content"><span data-i18n="footer.back_to_top">Back to top</span><span aria-hidden="true">↑</span></a></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>if (window.AOS) { AOS.init({ once: true }); document.documentElement.classList.add('aos_ready'); }</script>
+    <script type="module" src="/js/project_details.js"></script>
+  </body>
+</html>
