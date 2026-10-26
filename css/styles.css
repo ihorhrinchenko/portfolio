@@ -328,8 +328,6 @@ h1, h2, h3, p { margin-top: 0; }
 .detail_list { display: grid; gap: 7px; padding-left: 19px; }
 .detail_list li::marker { color: var(--accent); }
 .detail_technology_list { margin-top: 4px; }
-.screenshot_grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.screenshot_image { width: 100%; height: auto; aspect-ratio: 1.55; border: 1px solid var(--border); border-radius: var(--radius); object-fit: cover; }
 .project_detail_links { display: flex; flex-wrap: wrap; grid-column: 1 / -1; gap: 11px; margin-top: 10px; }
 .link_arrow { margin-left: 3px; font-size: 15px; }
 .project_error_state { max-width: 700px; min-height: 460px; margin: 0 auto; padding-top: 70px; }
@@ -460,7 +458,6 @@ h1, h2, h3, p { margin-top: 0; }
   .project_detail_body { grid-template-columns: 1fr; gap: 25px; margin-top: 34px; }
   .project_detail_links { grid-column: 1; }
   .project_detail_links .button { min-height: 45px; }
-  .screenshot_grid { gap: 8px; }
   .project_error_state { min-height: 370px; padding-top: 30px; }
 }
 

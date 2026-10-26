@@ -149,11 +149,8 @@ function render_project_detail(language) {
     detail_layout.append(placeholder_note);
   } else {
     const detail_body = create_element('div', 'project_detail_body');
-    append_content_section(detail_body, 'project_detail.purpose', project.purpose, language);
-    append_content_section(detail_body, 'project_detail.problem', project.problem, language);
     append_content_section(detail_body, 'project_detail.features', get_localized_value(project.features, language), language, true);
     append_content_section(detail_body, 'project_detail.implementation', project.implementation_details, language);
-    append_content_section(detail_body, 'project_detail.decisions', project.technical_decisions, language);
     append_content_section(detail_body, 'project_detail.challenges', project.challenges, language);
     append_content_section(detail_body, 'project_detail.lessons', project.lessons_learned, language);
 
@@ -164,26 +161,6 @@ function render_project_detail(language) {
       project.technologies.forEach((technology) => technology_list.append(create_element('li', '', technology)));
       technologies_section.append(technology_list);
       detail_body.append(technologies_section);
-    }
-
-    if (Array.isArray(project.screenshots) && project.screenshots.length) {
-      const screenshots_section = create_element('section', 'detail_content_section');
-      screenshots_section.append(create_element('h2', '', get_translation(language, 'project_detail.screenshots')));
-      const screenshot_grid = create_element('div', 'screenshot_grid');
-      project.screenshots.forEach((screenshot) => {
-        if (!screenshot || typeof screenshot.src !== 'string') return;
-        const screenshot_image = create_element('img', 'screenshot_image');
-        screenshot_image.src = screenshot.src;
-        screenshot_image.alt = get_localized_value(screenshot.alt, language)
-          || `${get_localized_value(project.name, language)} — ${get_translation(language, 'project_detail.screenshots')} ${screenshot_grid.children.length + 1}`;
-        screenshot_image.loading = 'lazy';
-        screenshot_image.addEventListener('error', () => screenshot_image.remove());
-        screenshot_grid.append(screenshot_image);
-      });
-      if (screenshot_grid.children.length) {
-        screenshots_section.append(screenshot_grid);
-        detail_body.append(screenshots_section);
-      }
     }
 
     const project_links = create_element('div', 'project_detail_links');

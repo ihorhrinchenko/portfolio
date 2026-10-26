@@ -175,6 +175,55 @@ export const projects = [
       de: "Eine Portfolio-Demo sollte echte Funktionen klar von beispielhaften Inhalten unterscheiden. Wayfarer kennzeichnet Bewertungen und Geschichten als Demoinhalte und erklärt den Umgang mit lokalem Speicher, Karte und Kontaktformular. Datenbasierte Inhalte und getrennte Übersetzungen erleichtern außerdem die Erweiterung des Guides.",
     },
   },
+  {
+    id: "kormotech",
+    name: { en: "Kormotech Family Album", de: "Kormotech-Familienalbum" },
+    description: {
+      en: "A responsive microsite for Kormotech Family where people can find pets across Ukraine, search by name or city, and add a pet to the community album.",
+      de: "Eine responsive Microsite für Kormotech Family: Hier können Nutzer Tiere in der Ukraine nach Name oder Stadt suchen und ein Tier zum Familienalbum hinzufügen.",
+    },
+    type: "commercial",
+    is_placeholder: false,
+    github_url: "",
+    live_demo_url: "https://family.kormotech.com/",
+    preview_image: new URL("../assets/images/kormotech.png", import.meta.url)
+      .href,
+    preview_alt: {
+      en: "Illustrated background used on the Kormotech Family landing page.",
+      de: "Illustration aus dem Hintergrund der Kormotech-Family-Startseite.",
+    },
+    technologies: ["HTML5", "SCSS", "JavaScript", "jQuery", "REST API"],
+    features: {
+      en: [
+        "Interactive map of Ukraine with selectable city markers",
+        "Pet search by name or city, with city autocomplete",
+        "Pet submission form with contact details, story, photo previews, and avatar selection",
+        "Pet album cards with profile details, photo gallery, and social sharing",
+        "Support contact form with validation and feedback",
+        "Responsive layouts for desktop and mobile",
+      ],
+      de: [
+        "Interaktive Karte der Ukraine mit auswählbaren Städten",
+        "Tiersuche nach Name oder Stadt mit Autovervollständigung",
+        "Formular zum Hinzufügen eines Tieres mit Kontaktdaten, Geschichte, Fotovorschau und Avatar-Auswahl",
+        "Tierkarten mit Profilangaben, Fotogalerie und Teilen-Funktion",
+        "Kontaktformular für den Support mit Validierung und Rückmeldung",
+        "Responsive Layouts für Desktop und Mobilgeräte",
+      ],
+    },
+    implementation_details: {
+      en: "Built as a responsive two-page frontend with HTML, SCSS, and vanilla JavaScript. The homepage queries Kormotech’s REST API for city and pet search. jQuery Form handles pet submissions and support requests; the album UI displays pet cards, profile details, photo galleries, and social sharing links.",
+      de: "Umgesetzt als responsives Frontend mit zwei Seiten, HTML, SCSS und Vanilla JavaScript. Die Startseite nutzt die REST-API von Kormotech für die Stadt- und Tiersuche. jQuery Form verarbeitet Tieranmeldungen und Supportanfragen; das Album zeigt Tierkarten, Profildetails, Fotogalerien und Links zum Teilen.",
+    },
+    challenges: {
+      en: "Keeping city autocomplete, map selection, and API-backed search in sync while supporting mobile layouts. The submission form also needed to handle multiple photo uploads, avatar selection, and input validation.",
+      de: "Städte-Autovervollständigung, Kartenauswahl und API-Suche aufeinander abzustimmen und zugleich mobile Layouts zu unterstützen. Das Anmeldeformular musste außerdem mehrere Foto-Uploads, die Avatar-Auswahl und die Eingabeprüfung ermöglichen.",
+    },
+    lessons_learned: {
+      en: "The project provided practical experience connecting a frontend to a REST API, managing search and form states, and building responsive interfaces with interactive maps and image uploads.",
+      de: "Das Projekt vermittelte praktische Erfahrung mit der Anbindung eines Frontends an eine REST-API, der Verwaltung von Such- und Formularzuständen sowie responsiven Oberflächen mit interaktiven Karten und Bild-Uploads.",
+    },
+  },
 ];
 
 export function get_project(project_id) {
