@@ -19,7 +19,6 @@ function save_storage(storage_key, value) {
   try {
     localStorage.setItem(storage_key, value);
   } catch {
-    // The page remains fully usable if browser storage is unavailable.
   }
 }
 
