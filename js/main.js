@@ -130,7 +130,7 @@ function create_project_visual(project, project_index) {
     const visual_header = create_element('div', 'visual_header');
     visual_header.append(create_element('span', 'visual_header_mark'), create_element('span', 'visual_header_line'));
     const visual_content = create_element('div', 'visual_content');
-    visual_content.append(create_element('span', 'visual_placeholder_label', get_translation(current_language, 'projects.placeholder_preview')));
+    visual_content.append(create_element('span', 'visual_placeholder_label', get_translation(current_language, 'projects.preview_unavailable')));
     const visual_shapes = create_element('div', 'visual_shapes');
     visual_shapes.append(create_element('span', 'visual_shape visual_shape_one'), create_element('span', 'visual_shape visual_shape_two'), create_element('span', 'visual_shape visual_shape_three'));
     visual_content.append(visual_shapes);
@@ -150,9 +150,9 @@ function create_project_card(project, project_index) {
   const content = create_element('div', 'project_card_content');
   const meta_row = create_element('div', 'project_meta_row');
   meta_row.append(create_element('span', 'project_number', String(project_index + 1).padStart(2, '0')));
-  const status = create_element('span', 'project_status', get_translation(current_language, `project_status.${project.status || 'placeholder'}`));
-  status.id = `${card_id}_status`;
-  meta_row.append(status);
+  const project_type = create_element('span', 'project_type', get_translation(current_language, `project_type.${project.type}`));
+  project_type.id = `${card_id}_type`;
+  meta_row.append(project_type);
   const title = create_element('h3', 'project_card_title', get_project_text(project, 'name', current_language));
   title.id = `${card_id}_title`;
   const description = create_element('p', 'project_card_description', get_project_text(project, 'description', current_language));
@@ -163,7 +163,7 @@ function create_project_card(project, project_index) {
   const action_arrow = create_element('span', 'action_arrow', '↗');
   action_arrow.setAttribute('aria-hidden', 'true');
   footer.append(action_label, action_arrow);
-  card.setAttribute('aria-labelledby', `${title.id} ${status.id} ${action_label.id}`);
+  card.setAttribute('aria-labelledby', `${title.id} ${project_type.id} ${action_label.id}`);
   const description_ids = description.textContent.trim() ? [description.id] : [];
 
   content.append(meta_row, title, description);

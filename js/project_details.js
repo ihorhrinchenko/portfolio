@@ -48,7 +48,7 @@ function append_project_preview(container, language) {
   const placeholder = create_element('div', 'detail_preview_placeholder');
   placeholder.setAttribute('aria-hidden', 'true');
   const placeholder_mark = create_element('span', 'detail_preview_mark', 'IH.');
-  const placeholder_label = create_element('span', 'detail_preview_label', get_translation(language, 'projects.placeholder_preview'));
+  const placeholder_label = create_element('span', 'detail_preview_label', get_translation(language, 'projects.preview_unavailable'));
   const placeholder_number = create_element('span', 'detail_preview_number', get_project_number());
   placeholder.append(placeholder_mark, placeholder_label, placeholder_number);
   container.append(placeholder);
@@ -126,7 +126,7 @@ function render_project_detail(language) {
   const detail_layout = create_element('article', 'project_detail');
   const detail_header = create_element('header', 'project_detail_header');
   const detail_meta = create_element('div', 'project_detail_meta');
-  detail_meta.append(create_element('span', 'project_status', get_translation(language, `project_status.${project.status || 'placeholder'}`)));
+  detail_meta.append(create_element('span', 'project_type', get_translation(language, `project_type.${project.type}`)));
   detail_meta.append(create_element('span', 'project_number', get_project_number()));
   detail_header.append(detail_meta);
   detail_header.append(create_element('h1', '', get_localized_value(project.name, language)));
