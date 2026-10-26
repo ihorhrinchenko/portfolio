@@ -5,6 +5,9 @@ import { defineConfig } from 'vite';
 const project_root = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  // This repository is served from a GitHub Pages subpath (/portfolio/).
+  // Relative URLs keep built pages and bundled assets working there.
+  base: './',
   build: {
     rollupOptions: {
       input: {

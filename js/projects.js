@@ -20,7 +20,7 @@ export const projects = [
     is_placeholder: false,
     github_url: "https://github.com/igorgrinchenko/tonality",
     live_demo_url: "https://tonality.netlify.app/",
-    preview_image: "assets/images/tonality.png",
+    preview_image: new URL("../assets/images/tonality.png", import.meta.url).href,
     preview_alt: { en: "", de: "" },
     technologies: [
       "React",
