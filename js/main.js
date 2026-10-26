@@ -143,6 +143,9 @@ function create_project_visual(project, project_index) {
 
 function create_project_card(project, project_index) {
   const card = create_element('a', 'project_card');
+  card.dataset.aos = 'fade-up';
+  const animation_delay = Math.min(project_index * 45, 135);
+  if (animation_delay) card.dataset.aosDelay = String(animation_delay);
   const card_id = `project_card_${project.id}`;
   card.href = `project.html?project=${encodeURIComponent(project.id)}`;
   card.append(create_project_visual(project, project_index));
@@ -185,6 +188,7 @@ function render_projects() {
   if (!projects_grid) return;
   const project_cards = projects.map((project, project_index) => create_project_card(project, project_index));
   projects_grid.replaceChildren(...project_cards);
+  window.AOS?.refreshHard?.();
 }
 
 function init_language_controls() {

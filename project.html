@@ -50,7 +50,7 @@
       </nav>
     </header>
     <main id="main_content" class="project_page_main page_container" tabindex="-1">
-      <a class="back_link" href="/#projects_section"><span aria-hidden="true">←</span><span data-i18n="project_detail.back">Back to projects</span></a>
+      <a class="back_link" href="/#projects_section" data-aos="fade-up"><span aria-hidden="true">←</span><span data-i18n="project_detail.back">Back to projects</span></a>
       <div id="project_detail_root">
         <noscript><p>Enable JavaScript to view project details.</p></noscript>
       </div>
@@ -59,7 +59,7 @@
       <div class="page_container footer_inner"><a class="footer_name" href="/">Ihor Hrinchenko <span>© <span id="footer_year"></span></span></a><p data-i18n="footer.note">Designed and built with care.</p><a class="footer_top_link" href="#main_content"><span data-i18n="footer.back_to_top">Back to top</span><span aria-hidden="true">↑</span></a></div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>if (window.AOS) { AOS.init({ once: true }); document.documentElement.classList.add('aos_ready'); }</script>
+    <script>if (window.AOS) { AOS.init({ duration: 600, easing: 'ease-out-cubic', offset: 48, once: true, mirror: false, disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches }); document.documentElement.classList.add('aos_ready'); }</script>
     <script type="module" src="/js/project_details.js"></script>
   </body>
 </html>

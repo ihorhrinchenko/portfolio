@@ -14,7 +14,7 @@ export const translations = {
       identity: 'Typographic identity for Ihor Hrinchenko',
       languages: 'Languages'
     },
-    nav: { about: 'About', projects: 'Projects', experience: 'Experience', skills: 'Skills', contact: 'Contact' },
+    nav: { about: 'About', projects: 'Projects', experience: 'Experience', skills: 'Skills', certificates: 'Certificates', contact: 'Contact' },
     hero: {
       eyebrow: 'Frontend Developer · Hagen, Germany',
       headline: 'Building thoughtful, responsive web experiences.',
@@ -94,8 +94,32 @@ export const translations = {
       apis_tools: 'APIs & tools',
       foundational: 'Foundational knowledge'
     },
+    certificates: {
+      index: '05 / Courses & certificates',
+      heading: 'Skills supported by hands-on learning.',
+      intro: 'Seven certificates covering core web technologies, version control, and practical JavaScript and React projects.',
+      skills_label: 'Skills covered',
+      preview_label: 'Preview of the certificate PDF',
+      course: 'Course certificate',
+      project: 'Project work',
+      open: 'View certificate',
+      html_title: 'HTML & CSS',
+      html_description: 'Covers semantic HTML structure, CSS styling, and responsive layout principles for building clear, adaptable web interfaces.',
+      javascript_title: 'JavaScript',
+      javascript_description: 'Builds a foundation in JavaScript syntax and program logic for adding behavior and interactivity to web pages.',
+      react_title: 'React',
+      react_description: 'Introduces component-based interface development and reusable UI patterns for interactive web applications.',
+      react_project_title: 'React project',
+      react_project_description: 'Applies React in a practical project, organizing an interface with reusable components and turning an application idea into a working build.',
+      javascript_project_title: 'JavaScript project',
+      javascript_project_description: 'Applies JavaScript in a project, structuring program logic and implementing interactive behavior in an application.',
+      php_title: 'PHP & MySQL',
+      php_description: 'Introduces server-side programming with PHP and the fundamentals of storing and working with data in a MySQL database.',
+      git_title: 'GitHub & GitLab',
+      git_description: 'Covers Git version control and working with GitHub and GitLab repositories to support a collaborative development workflow.'
+    },
     learning: {
-      index: '05 / Continued learning',
+      index: '06 / Continued learning',
       heading: 'Education & languages.',
       training_dates: 'May 2026 — present',
       training_title: 'Full-Stack Developer training',
@@ -110,7 +134,7 @@ export const translations = {
       native: 'Native'
     },
     contact: {
-      index: '06 / Contact',
+      index: '07 / Contact',
       heading: "Let's talk about your next project.",
       intro: 'For opportunities and professional conversations, email is the best way to reach me.',
       location: 'Hagen, Germany'
@@ -137,7 +161,7 @@ export const translations = {
       identity: 'Typografisches Porträt von Ihor Hrinchenko',
       languages: 'Sprachen'
     },
-    nav: { about: 'Über mich', projects: 'Projekte', experience: 'Berufserfahrung', skills: 'Technologien', contact: 'Kontakt' },
+    nav: { about: 'Über mich', projects: 'Projekte', experience: 'Berufserfahrung', skills: 'Technologien', certificates: 'Zertifikate', contact: 'Kontakt' },
     hero: {
       eyebrow: 'Frontend Developer · Hagen, Deutschland',
       headline: 'Ich entwickle durchdachte, responsive Webanwendungen.',
@@ -217,8 +241,32 @@ export const translations = {
       apis_tools: 'APIs & Werkzeuge',
       foundational: 'Grundkenntnisse'
     },
+    certificates: {
+      index: '05 / Kurse & Zertifikate',
+      heading: 'Fundiertes Wissen aus Theorie und Praxis.',
+      intro: 'Sieben Zertifikate zu zentralen Webtechnologien, Versionsverwaltung und praktischen JavaScript- und React-Projekten.',
+      skills_label: 'Behandelte Kompetenzen',
+      preview_label: 'Vorschau des Zertifikat-PDFs',
+      course: 'Kurszertifikat',
+      project: 'Projektarbeit',
+      open: 'Zertifikat ansehen',
+      html_title: 'HTML & CSS',
+      html_description: 'Behandelt semantische HTML-Strukturen, CSS-Gestaltung und responsive Layoutprinzipien für übersichtliche, anpassungsfähige Weboberflächen.',
+      javascript_title: 'JavaScript',
+      javascript_description: 'Vermittelt Grundlagen der JavaScript-Syntax und Programmlogik, um Webseiten um Verhalten und Interaktionen zu erweitern.',
+      react_title: 'React',
+      react_description: 'Einführung in die komponentenbasierte Oberflächenentwicklung und wiederverwendbare UI-Muster für interaktive Webanwendungen.',
+      react_project_title: 'React-Projekt',
+      react_project_description: 'Setzt React in einer praktischen Projektarbeit ein: Eine Oberfläche wird mit wiederverwendbaren Komponenten strukturiert und als Anwendung umgesetzt.',
+      javascript_project_title: 'JavaScript-Projekt',
+      javascript_project_description: 'Wendet JavaScript in einer Projektarbeit an, strukturiert Programmlogik und setzt interaktives Verhalten in einer Anwendung um.',
+      php_title: 'PHP & MySQL',
+      php_description: 'Einführung in serverseitige Programmierung mit PHP sowie Grundlagen zur Speicherung und Verarbeitung von Daten in einer MySQL-Datenbank.',
+      git_title: 'GitHub & GitLab',
+      git_description: 'Behandelt Versionsverwaltung mit Git und die Nutzung von GitHub- und GitLab-Repositories in einem gemeinschaftlichen Entwicklungsablauf.'
+    },
     learning: {
-      index: '05 / Weiterentwicklung',
+      index: '06 / Weiterentwicklung',
       heading: 'Ausbildung & Sprachen.',
       training_dates: 'Mai 2026 — heute',
       training_title: 'Weiterbildung zum Full-Stack Developer',
@@ -233,7 +281,7 @@ export const translations = {
       native: 'Muttersprache'
     },
     contact: {
-      index: '06 / Kontakt',
+      index: '07 / Kontakt',
       heading: 'Lassen Sie uns über Ihr nächstes Projekt sprechen.',
       intro: 'Für berufliche Möglichkeiten und fachlichen Austausch erreichen Sie mich am besten per E-Mail.',
       location: 'Hagen, Deutschland'

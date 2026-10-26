@@ -57,6 +57,7 @@ function append_project_preview(container, language) {
 function append_content_section(parent, title_key, content, language, list_mode = false) {
   if (!content || (Array.isArray(content) && content.length === 0)) return;
   const section = create_element('section', 'detail_content_section');
+  section.dataset.aos = 'fade-up';
   section.append(create_element('h2', '', get_translation(language, title_key)));
 
   if (Array.isArray(content)) {
@@ -104,6 +105,7 @@ function update_detail_metadata(language) {
 
 function render_not_found(root, language) {
   const error_state = create_element('section', 'project_error_state');
+  error_state.dataset.aos = 'fade-up';
   error_state.append(create_element('p', 'section_index', get_translation(language, 'project_detail.not_found_index')));
   error_state.append(create_element('h1', '', get_translation(language, 'project_detail.not_found_title')));
   error_state.append(create_element('p', 'project_error_message', get_translation(language, 'project_detail.not_found_message')));
@@ -111,6 +113,7 @@ function render_not_found(root, language) {
   back_link.href = '/#projects_section';
   error_state.append(back_link);
   root.replaceChildren(error_state);
+  window.AOS?.refreshHard?.();
 }
 
 function render_project_detail(language) {
@@ -125,6 +128,7 @@ function render_project_detail(language) {
 
   const detail_layout = create_element('article', 'project_detail');
   const detail_header = create_element('header', 'project_detail_header');
+  detail_header.dataset.aos = 'fade-up';
   const detail_meta = create_element('div', 'project_detail_meta');
   detail_meta.append(create_element('span', 'project_type', get_translation(language, `project_type.${project.type}`)));
   detail_meta.append(create_element('span', 'project_number', get_project_number()));
@@ -134,11 +138,15 @@ function render_project_detail(language) {
   detail_layout.append(detail_header);
 
   const preview = create_element('div', 'project_detail_preview');
+  preview.dataset.aos = 'fade-up';
+  preview.dataset.aosDelay = '80';
   append_project_preview(preview, language);
   detail_layout.append(preview);
 
   if (project.is_placeholder) {
     const placeholder_note = create_element('aside', 'project_placeholder_note');
+    placeholder_note.dataset.aos = 'fade-up';
+    placeholder_note.dataset.aosDelay = '80';
     const placeholder_mark = create_element('span', 'placeholder_note_mark', '↳');
     placeholder_mark.setAttribute('aria-hidden', 'true');
     placeholder_note.append(placeholder_mark);
@@ -156,6 +164,7 @@ function render_project_detail(language) {
 
     if (Array.isArray(project.technologies) && project.technologies.length) {
       const technologies_section = create_element('section', 'detail_content_section');
+      technologies_section.dataset.aos = 'fade-up';
       technologies_section.append(create_element('h2', '', get_translation(language, 'project_detail.technologies')));
       const technology_list = create_element('ul', 'skill_tags detail_technology_list');
       project.technologies.forEach((technology) => technology_list.append(create_element('li', '', technology)));
@@ -164,6 +173,8 @@ function render_project_detail(language) {
     }
 
     const project_links = create_element('div', 'project_detail_links');
+    project_links.dataset.aos = 'fade-up';
+    project_links.dataset.aosDelay = '80';
     append_link(project_links, project.live_demo_url, 'project_detail.live_demo', language);
     append_link(project_links, project.github_url, 'project_detail.repository', language);
     if (project_links.children.length) detail_body.append(project_links);
@@ -171,6 +182,7 @@ function render_project_detail(language) {
   }
 
   root.replaceChildren(detail_layout);
+  window.AOS?.refreshHard?.();
 }
 
 window.addEventListener('portfolio_language_change', (event) => render_project_detail(event.detail.language));
